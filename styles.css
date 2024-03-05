@@ -1,0 +1,130 @@
+/*
+    styles.css
+
+    Used for Taniti Island site
+
+    author: Brandon Jenkins
+*/
+:root {
+    --font: Oxygen, sans-serif;
+    --black-font: black;
+    --white-font: rgb(220, 252, 255);
+    --section-overlay: rgba(131, 155, 177, 0.9);
+    --nav-overlay: rgba(131, 155, 177, 0.85);
+    --hover-overlay: rgba(209, 220, 229, 0.85);
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+h1, h2, h3, h4 {
+    margin: 0;
+    padding: 0;
+}
+
+.smallCaps {
+    font-variant: small-caps;
+    font-size: 1.2em;
+    letter-spacing: 0.1em;
+}
+
+body {    
+    background-image: url(./assets/island.webp);
+    background-size: cover;
+    font-family: var(--font);
+}
+
+h1 {
+    padding: 1rem 1.5rem;
+    font-variant: small-caps;
+    font-size: 3em;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+}
+
+h2 {
+    font-size: 2em;
+    letter-spacing: 0.1em;
+    margin: 2rem;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    margin: 1rem;
+    background-color: var(--nav-overlay);
+}
+
+nav {
+    width: 100%;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+nav li, #landing li {
+    list-style: none;
+    align-items: center;
+}
+
+nav li a, #landing li a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.5em;
+    letter-spacing: 0.1em;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5rem;
+    padding: 5rem;
+}
+
+#landing {
+    background-color: var(--section-overlay);
+}
+
+#landing p {
+    margin: 3rem 0;
+    padding: 0 10rem;
+    font-size: 1.45em;
+    letter-spacing: 0.05em;
+}
+
+#landing ul {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 3rem;
+    padding: 0rem;
+
+}
+
+
+#landing li a {
+    display: flex;
+    flex-direction: column;
+    width: 10em;
+    gap: 0.5em;
+    padding: 2em 0;
+    border: 1px solid black;
+    text-align: center;
+}
+
+#landing li a:hover {
+    background-color: var(--hover-overlay);
+    border: none;
+}
