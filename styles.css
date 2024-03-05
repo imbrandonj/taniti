@@ -8,10 +8,12 @@
 :root {
     --font: Oxygen, sans-serif;
     --black-font: black;
-    --white-font: rgb(220, 252, 255);
-    --section-overlay: rgba(131, 155, 177, 0.9);
+    --white-font: rgb(233, 253, 255);
+    --green-font: rgb(219, 249, 219);
+    --blue-overlay: rgba(131, 155, 177, 0.9);
+    --green-overlay: rgba(170, 208, 170, 0.9);
     --nav-overlay: rgba(131, 155, 177, 0.85);
-    --hover-overlay: rgba(209, 220, 229, 0.85);
+    --hover-overlay: rgba(200, 247, 200, .85);
 }
 
 html, body {
@@ -33,7 +35,6 @@ h1, h2, h3, h4 {
 .smallCaps {
     font-variant: small-caps;
     font-size: 1.2em;
-    letter-spacing: 0.1em;
 }
 
 body {    
@@ -48,12 +49,17 @@ h1 {
     font-size: 3em;
     font-weight: 400;
     letter-spacing: 0.2em;
+    text-shadow: 4px 2px 12px var(--green-font);
 }
 
 h2 {
     font-size: 2em;
     letter-spacing: 0.1em;
     margin: 2rem;
+}
+
+h2 span {
+    letter-spacing: 0.2em;
 }
 
 header {
@@ -72,16 +78,25 @@ nav ul {
     justify-content: space-around;
 }
 
-nav li, #landing li {
+nav li, #landing li, #stay li, #faq li {
     list-style: none;
     align-items: center;
 }
 
-nav li a, #landing li a {
+nav li a, #landing li a, #stay li a {
     color: black;
     text-decoration: none;
     font-size: 1.5em;
     letter-spacing: 0.1em;
+}
+
+nav li a {
+    padding: 0 1em;
+}
+
+nav li a:hover, .current {
+    color: var(--green-font);
+    text-shadow: 8px 2px 18px black;
 }
 
 section {
@@ -93,26 +108,29 @@ section {
 }
 
 #landing {
-    background-color: var(--section-overlay);
+    background-color: var(--blue-overlay);
 }
 
-#landing p {
+#stay, #faq {
+    background-color: var(--green-overlay);
+}
+
+#landing p, #stay p {
     margin: 3rem 0;
     padding: 0 10rem;
     font-size: 1.45em;
     letter-spacing: 0.05em;
+    line-height: 1.5em;
 }
 
-#landing ul {
+#landing ul, #stay ul, #faq ul {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
     width: 100%;
     margin: 3rem;
     padding: 0rem;
-
 }
-
 
 #landing li a {
     display: flex;
@@ -127,4 +145,28 @@ section {
 #landing li a:hover {
     background-color: var(--hover-overlay);
     border: none;
+}
+
+#stay li {
+    font-size: 1.5em;
+    border: 1px solid black;
+    padding: 2em;
+    background-color: var(--blue-overlay);
+}
+
+#faq li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 20em;
+    gap: 1em;
+    padding: 1em;
+    letter-spacing: 0.05em;
+    text-align: center;
+    border: 1px solid black;
+    background-color: var(--blue-overlay);
+}
+
+#faq li img {
+    margin: 0.5em;
 }
