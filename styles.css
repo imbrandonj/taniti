@@ -37,6 +37,26 @@ h1, h2, h3, h4 {
     font-size: 1.2em;
 }
 
+.leftAlign {
+    text-align: left;
+    align-self: flex-start;
+}
+
+.rightAlign {
+    text-align: right;
+    align-self: flex-end;
+}
+
+.two-col {
+    display: flex;
+    justify-content: center;
+}
+
+hr {
+    margin: 0 5rem;
+    border: 1px solid black;
+}
+
 body {    
     background-image: url(./assets/island.webp);
     background-size: cover;
@@ -55,7 +75,7 @@ h1 {
 h2 {
     font-size: 2em;
     letter-spacing: 0.1em;
-    margin: 2rem;
+    margin: 2rem 0;
 }
 
 h2 span {
@@ -103,16 +123,31 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 5rem;
     padding: 5rem;
 }
 
-#landing {
+#landing, #dining, #entertainment, #gettingThere {
     background-color: var(--blue-overlay);
 }
 
-#stay, #faq {
+#stay, #grocery, #sightseeing, #there, #faq {
     background-color: var(--green-overlay);
+}
+
+#landing, #stay, #faq {
+    margin: 5rem;
+}
+
+#sightseeing, #entertainment, #gettingThere, #there {
+    margin: 0 5rem;
+}
+
+#grocery, #dining, #sightseeing, #gettingThere {
+    margin-top: 5rem;
+}
+
+#entertainment, #there {
+    margin-bottom: 5rem;
 }
 
 #landing p, #stay p {
@@ -138,7 +173,7 @@ section {
     width: 10em;
     gap: 0.5em;
     padding: 2em 0;
-    border: 1px solid black;
+    border: 1px solid var(--green-font);
     text-align: center;
 }
 
@@ -154,6 +189,54 @@ section {
     background-color: var(--blue-overlay);
 }
 
+#grocery, #dining {
+    width: 50%;
+}
+
+#dining {
+    margin-left: 5rem;
+}
+
+#grocery {
+    border-left: 1px solid black;
+    margin-right: 5rem;
+}
+
+#grocery .two-col {
+    gap: 5em;
+}
+
+#grocery h2, #dining h2, #sightseeing h2, #entertainment h2, #gettingThere h2, #there h2 {
+    align-self: flex-start;
+}
+
+#entertainment p, #sightseeing p {
+    font-size: 1.15rem;
+    letter-spacing: 0.05rem;
+}
+
+#sightseeing .two-col, #entertainment .two-col, #gettingThere .two-col, #there .two-col {
+    gap: 5rem;
+    align-items: center;
+}
+
+#sightseeing img {
+    margin: 0 6rem;
+}
+
+#gettingThere p, #there p {
+    font-size: 1.25rem;
+    letter-spacing: 0.05rem;
+}
+
+#entertainment img, #gettingThere img, #sightseeing p {
+    margin-left: 5rem;
+}
+
+#entertainment img, #there img {
+    margin-right: 5rem;
+}
+
 #faq li {
     display: flex;
     flex-direction: column;
@@ -161,6 +244,7 @@ section {
     width: 20em;
     gap: 1em;
     padding: 1em;
+    font-size: 1.1em;
     letter-spacing: 0.05em;
     text-align: center;
     border: 1px solid black;
