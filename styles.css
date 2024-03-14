@@ -177,16 +177,33 @@ section {
     text-align: center;
 }
 
-#landing li a:hover {
+#landing li a:hover, #stay li a:hover {
     background-color: var(--hover-overlay);
-    border: none;
+    border: 1px solid transparent;
 }
 
 #stay li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 18em;
+    text-align: center;
     font-size: 1.5em;
-    border: 1px solid black;
+    letter-spacing: 0.05em;
+    gap: 1em;
     padding: 2em;
+    border: 1px solid black;
     background-color: var(--blue-overlay);
+}
+
+#stay li em, #stay li a {
+    font-size: 0.9em;
+}
+
+#stay li a {
+    border: 1px solid var(--green-overlay);
+    border-radius: 0.25em;
+    padding: 0.5em 1em;
 }
 
 #grocery, #dining {
