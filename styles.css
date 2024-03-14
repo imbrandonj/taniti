@@ -146,7 +146,7 @@ section {
     margin-top: 5rem;
 }
 
-#entertainment, #there {
+#dining, #grocery, #entertainment, #there {
     margin-bottom: 5rem;
 }
 
@@ -227,9 +227,30 @@ section {
     align-self: flex-start;
 }
 
-#entertainment p, #sightseeing p {
+#dining h2, #grocery h2 {
+    margin-bottom: 3rem;
+}
+
+.store, .restaurant {
+    font-size: 1.5em;
+    letter-spacing: 0.1em;
+}
+
+.restaurant {
+    line-height: 3rem;
+}
+
+#grocery p {
+    text-align: center;
+}
+
+#grocery p, #dining p, #entertainment p, #sightseeing p {
     font-size: 1.15rem;
     letter-spacing: 0.05rem;
+}
+
+#grocery .two-col {
+    margin: 3rem 0;
 }
 
 #sightseeing .two-col, #entertainment .two-col, #gettingThere .two-col, #there .two-col {
